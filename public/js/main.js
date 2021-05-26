@@ -5,8 +5,9 @@ let loading = false;
 const getData = async () => {
     loading = true; 
     const res = await fetch('http://localhost:3001/projectsTimeline')
-    const data = await res.json();
+    let data = await res.json();
     loading = false;
+    console.log(data)
     return data 
 }
 
