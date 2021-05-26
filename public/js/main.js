@@ -4,7 +4,7 @@ let loading = false;
 
 const getData = async () => {
     loading = true; 
-    const res = await fetch('http://localhost:3001/projectsTimeline')
+    const res = await fetch('http://localhost:3001/api/projectsTimeline')
     let data = await res.json();
     loading = false;
     console.log(data)
@@ -42,3 +42,7 @@ const addData = async () => {
 }
 
 addData()
+
+$.get("html/navbar.html", function(data){
+    $("#nav-placeholder").replaceWith(data);
+});
