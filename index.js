@@ -1,5 +1,5 @@
 const express = require('express')
-const getProjectsTimeline = require('./services/notion')
+const { getProjectsTimeline, getReviews } = require('./services/notion')
 const path = require('path')
 const PORT = process.env.PORT || 3001
 

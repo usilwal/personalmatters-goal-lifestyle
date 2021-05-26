@@ -6,11 +6,12 @@ const notion = new Client({
     auth: process.env.NOTION_TOKEN
 })
 
-const database_id = process.env.NOTION_DATABASE_ID
+const projecttimeline_database_id = process.env.NOTION_PROJECTTIMELINE_DATABASE_ID
+const review_database_id = process.env.NOTION_REVIEW_DATABASE_ID
 
-module.exports = async function getProjectsTimeline() {
+exports.getProjectsTimeline = async function getProjectsTimeline() {
     const payload = {
-        path: `databases/${database_id}/query`,
+        path: `databases/${projecttimeline_database_id}/query`,
         method: 'POST'
     }
 
@@ -31,7 +32,36 @@ module.exports = async function getProjectsTimeline() {
         }
     })
 
-    events = events.sort((a, b) => new Date(b.date) - new Date(a.date))
+    events = events.sort((a, b) => new Date(b.date) - new Date(a.date)).reverse()
 
     return events 
 }
+
+exports.getReviews = async function getReviews() {
+    const payload = {
+        path: `databases/${review_database_id}/query`,
+        method: 'POST'
+    }
+
+    const {results} = await notion.request(payload)
+
+    let reviews = results.map(page => {
+        //store tags for each entry in array
+        return {
+            id: page.id,
+            title: page.properties.Name.title[0].plain_text,
+            art: page.properties.Art.files[0].name,
+            releasedOn: page.properties['Release Date'].date.start,
+            genre: page.properties.Genre.select.name, 
+            directors: page.properties.Directors.multi_select.map(director => { return director.name }),
+            studio: page.properties.Studio.select.name,
+            score: page.properties['Score /5'].select.name,
+            summary: page.properties.Summary.rich_text[0].plain_text,
+            watchedOn: page.properties['Watched On'].date.start
+        }
+    })
+
+    reviews = reviews.sort((a, b) => new Date(b.watchedOn) - new Date(a.watchedOn))
+    return reviews 
+}
+

@@ -46,7 +46,7 @@ ul {
   list-style: none;
 }
 
-body {
+#projects-timeline {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   max-width: 600px;
@@ -122,6 +122,56 @@ header {
     color: #000;
     transition: background color 1s;
 }
+
+#reviews {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #c4c4c4;
+    background-image: url("../images/reviewsbg.png");
+    background-repeat: repeat;
+    color: rgb(0, 0, 0);
+  }
+
+.review {
+    margin: 20px auto;
+    padding: 15px 15px;
+    background: #ffffff;
+    box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  @media (min-width: 980px) {
+      .review {
+      }
+  }
+  
+  .review .art {
+      max-width: 100px;
+      display: float;
+  }
+
+  .review h3 {
+    font-size: 25px;
+    text-align: center;
+  }
+  
+  .review li {
+    margin: 5px 0;
+  }
+  
+  .review .tag {
+    display: inline-flex;
+    margin: 5px; 
+    padding: 3px 5px;
+    background: #000000;
+    border-radius: 3px;
+    width: fit-content;
+    color: #fff;
+    transition: background 0.7s;
+  }
 
 hr {
     margin: 5px 100px;
