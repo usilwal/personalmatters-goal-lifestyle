@@ -2,16 +2,7 @@ const reviewEl = document.querySelector('#reviews');
 const loadingEl = document.querySelector('#loading');
 let loading = false; 
 
-`id: page.id,
-title: page.properties.Name.title[0].plain_text,
-art: page.properties.Art.files[0].name,
-releasedOn: page.properties['Release Date'].date.start,
-genre: page.properties.Genre.select.name, 
-directors: page.properties.Directors.multi_select.map(director => { return director.name }),
-studio: page.properties.Studio.select.name,
-score: page.properties['Score /5'].select.name,
-summary: page.properties.Summary.rich_text[0].plain_text,
-watchedOn: page.properties['Watched On'].date.start`
+
 const getData = async () => {
     loading = true; 
     const res = await fetch('http://localhost:3001/api/reviews')
@@ -33,12 +24,23 @@ const addData = async () => {
         const div = document.createElement('div');
         div.className = 'review';
         div.innerHTML = `
-            <div class="date"><strong>Watched On: ${review.watchedOn}</strong></div>   
+            <div class="date"><strong>Posted On: ${review.postedOn}</strong></div>   
             <hr/>
-            <h3>${review.title}</h3>  
-            <span><img src="${review.art}" alt="art" class="art"></img></span>
-            <p>${review.summary}</p>   
+            <div class="review-container">
+                <span><img src="${review.art}" alt="art" class="art"></img></span>
+                <div class="review-info">
+                    <h3>${review.title}</h3>  
+                    <p class="releasedOn">Release Date: ${review.releasedOn}</p>
+                    <p class="directors">Director: ${review.directors}</p>
+                    <p class="studio">Studio: ${review.studio}</p>
+                    <p class="genre">Genre: ${review.genre}</p>
+                    <p class="score">${review.score}</p>
+                </div>
+            </div>
+            <hr/>
+            <p class="summary">${review.summary}</p>   
         `
+
         reviewEl.appendChild(div);
     })
 }

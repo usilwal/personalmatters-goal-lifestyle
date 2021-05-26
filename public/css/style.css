@@ -72,7 +72,7 @@ header {
   height: 100px;
   width: 100px;
   position: absolute;
-  top: 30%;
+  top: 50%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -153,24 +153,40 @@ header {
       display: float;
   }
 
-  .review h3 {
-    font-size: 25px;
-    text-align: center;
-  }
-  
   .review li {
     margin: 5px 0;
   }
   
-  .review .tag {
-    display: inline-flex;
-    margin: 5px; 
-    padding: 3px 5px;
+  .review .review-container {
+    display: flex;
+    max-width: 85%;
+    margin: 10px auto; 
+    padding: 8px 15px;
     background: #000000;
     border-radius: 3px;
-    width: fit-content;
     color: #fff;
     transition: background 0.7s;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .review-info {
+    text-align: start;
+  }
+
+  .review-info h3 {
+    font-size: 25px;
+  }
+
+
+  .review-container .art {
+      background-color: rgb(151, 151, 151);
+      border-radius: 3px;
+      padding: 2px;
+  }
+
+  .summary {
+      padding: 10px 20px;
   }
 
 hr {

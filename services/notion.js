@@ -57,11 +57,11 @@ exports.getReviews = async function getReviews() {
             studio: page.properties.Studio.select.name,
             score: page.properties['Score /5'].select.name,
             summary: page.properties.Summary.rich_text[0].plain_text,
-            watchedOn: page.properties['Watched On'].date.start
+            postedOn: page.properties['Posted On'].date.start
         }
     })
 
-    reviews = reviews.sort((a, b) => new Date(b.watchedOn) - new Date(a.watchedOn))
+    reviews = reviews.sort((a, b) => new Date(b.postedOn) - new Date(a.postedOn))
     return reviews 
 }
 
