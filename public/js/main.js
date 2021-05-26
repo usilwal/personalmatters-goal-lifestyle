@@ -19,16 +19,20 @@ const addData = async () => {
     }
 
     events.forEach(event => {
+
         const div = document.createElement('div');
         div.className = 'event';
         div.innerHTML = `
+            <div class="date"><strong>${event.date}</strong></div>      
             <h3>${event.title}</h3>  
             <ul>
-                <li>Date: </strong>${event.date}</li>      
-                <li>Description: </strong>${event.description}</li>   
+                <li>${event.description}</li>   
             </ul>
-            <div class="tags">${event.tags}</div> 
         `
+        event.tags.forEach(tag => {
+            div.innerHTML += `<span class="tag">${tag}</span>`
+            console.log(tag);
+        });
         eventEl.appendChild(div);
     })
 }

@@ -15,7 +15,7 @@ body {
   line-height: 1.6;
   max-width: 600px;
   margin: 40px auto;
-  background-color: #305476;
+  background-color: #252525;
   color: #fff;
 }
 
@@ -38,24 +38,42 @@ header {
 }
 
 .event {
-  margin: 20px 0;
-  padding: 15px 25px;
-  background: #316290;
+  margin: 20px auto;
+  max-width: 75%;
+  padding: 15px 15px;
+  background: #444444;
   box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+  text-align: center;
 }
 
 .event h3 {
   font-size: 25px;
+  text-align: center;
 }
 
 .event li {
   margin: 5px 0;
 }
 
-.event .tags {
-  margin-top: 20px;
-  padding: 5px 10px;
-  background: #305476;
+.event .date {
+    width: fit-content;
+    font-size: 12px;
+    background: #242424;
+    padding: 5px;
+}
+
+.event .tag {
+  display: inline-flex;
+  margin: 5px; 
+  padding: 3px 5px;
+  background: #575757;
+  border-radius: 5px;
+  width:fit-content;
   color: #fff;
+}
+
+.event .tag:hover {
+    background: #8b8b8b;
+    transition: background 0.5s;
 }
