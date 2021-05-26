@@ -16,7 +16,7 @@ module.exports = async function getProjectsTimeline() {
 
     const {results} = await notion.request(payload)
 
-    const projects = results.map(page => {
+    let events = results.map(page => {
         //store tags for each entry in array
         tags = page.properties.Tags.multi_select.map(tag => {
             return tag.name
@@ -31,5 +31,7 @@ module.exports = async function getProjectsTimeline() {
         }
     })
 
-    return projects 
+    events = events.sort((a, b) => new Date(b.date) - new Date(a.date))
+
+    return events 
 }
