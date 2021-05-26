@@ -29,8 +29,8 @@ const addData = async () => {
                 <li>${event.description}</li>   
             </ul>
         `
-        event.tags.forEach(tag => {
-            div.innerHTML += `<span class="tag">${tag}</span>`
+        event.tagsInfo.forEach(tag => {
+            div.innerHTML += `<span class="tag" style="background-color: ${tag.color}">${tag.name}</span>`
             console.log(tag);
         });
         eventEl.appendChild(div);

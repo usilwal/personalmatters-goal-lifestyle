@@ -71,6 +71,7 @@ header {
   border-radius: 5px;
   width:fit-content;
   color: #fff;
+  transition: background 0.3s;
 }
 
 .event .tag:hover {

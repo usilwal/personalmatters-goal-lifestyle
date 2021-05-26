@@ -18,15 +18,15 @@ module.exports = async function getProjectsTimeline() {
 
     let events = results.map(page => {
         //store tags for each entry in array
-        tags = page.properties.Tags.multi_select.map(tag => {
-            return tag.name
+        tagsInfo = page.properties.Tags.multi_select.map(tag => {
+            return { name: tag.name, color: tag.color }
         });
-
+        
         return {
             id: page.id,
             title: page.properties.Name.title[0].text.content, 
             date: page.properties.Date.date.start,
-            tags: tags, 
+            tagsInfo: tagsInfo,
             description: page.properties.Description.rich_text[0].text.content,
         }
     })
