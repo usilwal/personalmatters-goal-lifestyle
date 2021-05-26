@@ -23,7 +23,8 @@ const addData = async () => {
         const div = document.createElement('div');
         div.className = 'event';
         div.innerHTML = `
-            <div class="date"><strong>${event.date}</strong></div>      
+            <div class="date"><strong>${event.date}</strong></div>   
+            <hr/>
             <h3>${event.title}</h3>  
             <ul>
                 <li>${event.description}</li>   
@@ -31,8 +32,8 @@ const addData = async () => {
         `
 
         event.tagsInfo.forEach(tag => {
-            borderLeft = `border-left: 1px solid ${tag.color};`
-            borderBottom = `border-bottom: 1px solid ${tag.color};`
+            borderLeft = `border-left: 2px solid ${tag.color};`
+            borderBottom = `border-bottom: 2px solid ${tag.color};`
             div.innerHTML += `<span class="tag" style="${borderLeft} ${borderBottom}">${tag.name}</span>`
             console.log(tag);
         });
