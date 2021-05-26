@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,16 +10,22 @@ ul {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   max-width: 600px;
   margin: 40px auto;
-  background-color: #252525;
-  color: #fff;
+  background-color: #c4c4c4;
+  background-image: url("../images/background.png");
+  background-repeat: repeat;
+  color: rgb(0, 0, 0);
 }
 
 header {
   text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: auto;
+  max-width: 450px;
 }
 
 #loading {
@@ -41,7 +46,7 @@ header {
   margin: 20px auto;
   max-width: 75%;
   padding: 15px 15px;
-  background: #444444;
+  background: #d8d8d8;
   box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   text-align: center;
@@ -56,25 +61,18 @@ header {
   margin: 5px 0;
 }
 
-.event .date {
-    width: fit-content;
-    font-size: 12px;
-    background: #242424;
-    padding: 5px;
-}
-
 .event .tag {
   display: inline-flex;
   margin: 5px; 
   padding: 3px 5px;
-  background: #575757;
-  border-radius: 5px;
+  background: #ffffff;
+  border-radius: 3px;
   width:fit-content;
-  color: #fff;
+  color: rgb(0, 0, 0);
   transition: background 0.3s;
 }
 
 .event .tag:hover {
-    background: #8b8b8b;
+    background: #a8a8a8;
     transition: background 0.5s;
 }
