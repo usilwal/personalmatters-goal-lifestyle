@@ -5,7 +5,7 @@ let loading = false;
 
 const getData = async () => {
     loading = true; 
-    const res = await fetch('http://localhost:7283/api/reviews')
+    const res = await fetch('https://personalmatters.herokuapp.com/api/reviews')
     let data = await res.json();
     loading = false;
     console.log(data)

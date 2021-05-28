@@ -4,7 +4,7 @@ let loading = false;
 
 const getData = async () => {
     loading = true; 
-    const res = await fetch('http://localhost:7283/api/projectstimeline')
+    const res = await fetch('https://personalmatters.herokuapp.com/api/projectstimeline')
     let data = await res.json();
     loading = false;
     console.log(data)
