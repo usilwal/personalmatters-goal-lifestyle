@@ -4,7 +4,7 @@ let loading = false;
 
 const getData = async () => {
     loading = true; 
-    const res = await fetch('https://localhost:3001/api/foodlog')
+    const res = await fetch('http://localhost:3001/api/foodlog')
     let data = await res.json();
     loading = false;
     return data 
