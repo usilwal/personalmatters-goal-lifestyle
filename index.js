@@ -17,6 +17,16 @@ app.get('/api/reviews', async (req, res) => {
     res.json(reviews) 
 })
 
+app.get('/api/bucketlist', async (req, res) => {
+    const bucketlist = await getBucketlist()
+    res.json(bucketlist) 
+})
+
+app.get('/api/foodlog', async (req, res) => {
+    const foodlog = await getFoodlog()
+    res.json(foodlog) 
+})
+
 app.get('/projectstimeline', async (req, res) => {
     res.sendFile(path.join(__dirname, '/public/index.html'))
 })
@@ -24,6 +34,14 @@ app.get('/projectstimeline', async (req, res) => {
 
 app.get('/reviews', async (req, res) => {
     res.sendFile(path.join(__dirname, '/public/html/reviews.html'))
+})
+
+app.get('/bucketlist', async (req, res) => {
+    res.sendFile(path.join(__dirname, '/public/html/bucketlist.html'))
+})
+
+app.get('/foodlog', async (req, res) => {
+    res.sendFile(path.join(__dirname, '/public/html/foodlog.html'))
 })
 
 app.listen(PORT, console.log(`Server started on port ${PORT}`))
