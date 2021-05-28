@@ -27,6 +27,9 @@ app.get('/api/foodlog', async (req, res) => {
     res.json(foodlog) 
 })
 
+app.get('/', async (req, res) => {
+    res.sendFile(path.join(__dirname, '/public/index.html'))
+})
 app.get('/projectstimeline', async (req, res) => {
     res.sendFile(path.join(__dirname, '/public/html/projectstimeline.html'))
 })
