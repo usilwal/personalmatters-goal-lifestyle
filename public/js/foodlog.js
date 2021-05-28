@@ -4,7 +4,7 @@ let loading = false;
 
 const getData = async () => {
     loading = true; 
-    const res = await fetch('http://localhost:3001/api/foodlog')
+    const res = await fetch('http://localhost:7283/api/foodlog')
     let data = await res.json();
     loading = false;
     return data 
@@ -32,7 +32,7 @@ const addData = async () => {
         `
 
         food.tags.forEach(tag => {
-            borderLeft = `border-left: 2px solid black;`
+            borderLeft = `border-left: 1px solid black;`
             borderBottom = `border-bottom: 2px solid black;`
             div.innerHTML += `<span class="tag" style="${borderLeft} ${borderBottom}">${tag}</span>`
         });
