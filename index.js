@@ -1,7 +1,7 @@
 const express = require('express')
 const { getProjectsTimeline, getReviews, getFoodlog, getBucketlist } = require('./services/notion')
 const path = require('path')
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 7283
 
 const app = express()
 
