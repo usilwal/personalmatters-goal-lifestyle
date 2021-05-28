@@ -46,13 +46,24 @@ ul {
   list-style: none;
 }
 
+#home {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: auto;
+  background-color: #c4c4c4;
+  background-image: url("../images/background.png");
+  background-repeat: repeat;
+  color: rgb(0, 0, 0);
+}
+
 #projects-timeline {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   max-width: 600px;
   margin: 40px auto;
   background-color: #c4c4c4;
-  background-image: url("../images/background.png");
+  background-image: url("../images/projecttimelinebg.png");
   background-repeat: repeat;
   color: rgb(0, 0, 0);
 }
@@ -123,7 +134,7 @@ header {
     transition: background color 1s;
 }
 
-#reviews {
+#minireviews {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     max-width: 600px;
@@ -187,6 +198,127 @@ header {
 
   .summary {
       padding: 10px 20px;
+  }
+
+
+  #foodlogpage {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #c4c4c4;
+    background-image: url("../images/foodlogbg.png");
+    background-repeat: repeat;
+    color: rgb(0, 0, 0);
+  }
+
+  .food {
+    margin: 20px auto;
+    max-width: 75%;
+    padding: 15px 15px;
+    background: #ffffff;
+    box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  @media (min-width: 980px) {
+      .food {
+      }
+  }
+  
+  .food h3 {
+    font-size: 25px;
+    text-align: center;
+  }
+  
+  .food li {
+    margin: 5px 0;
+  }
+
+  .location {
+    margin: 0px;
+    font-size: 0.8rem;
+  }
+  
+  .food .tag {
+    display: inline-flex;
+    margin: 5px; 
+    padding: 3px 5px;
+    background: #000000;
+    border-radius: 3px;
+    width: fit-content;
+    color: #fff;
+    transition: background 0.7s;
+  }
+  
+  .food .tag:hover {
+      background: #ffffff;
+      color: #000;
+      transition: background color 1s;
+  }
+
+  .food .image {
+    box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 2px;
+    max-width: 200px;
+  }
+  
+  #bucketlistpage {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #c4c4c4;
+    background-image: url("../images/bucketlistbg.png");
+    background-repeat: repeat;
+    color: rgb(0, 0, 0);
+  }
+
+  .blItem {
+    margin: 20px auto;
+    max-width: 75%;
+    padding: 15px 15px;
+    background: #ffffff;
+    box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  @media (min-width: 980px) {
+      .food {
+      }
+  }
+  
+  .blItem h3 {
+    font-size: 25px;
+    text-align: center;
+  }
+  
+  .blItem li {
+    margin: 5px 0;
+  }
+
+  .location {
+    margin: 0px;
+    font-size: 0.8rem;
+  }
+  
+  .blItem .tag {
+    display: inline-flex;
+    margin: 5px; 
+    padding: 3px 5px;
+    background: #000000;
+    border-radius: 3px;
+    width: fit-content;
+    color: #fff;
+    transition: background 0.7s;
+  }
+  
+  .blItem .tag:hover {
+      background: #ffffff;
+      color: #000;
+      transition: background color 1s;
   }
 
 hr {
