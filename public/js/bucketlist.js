@@ -21,7 +21,7 @@ const addData = async () => {
     bucketlist.forEach(blItem => {
 
         const div = document.createElement('div');
-        div.className = 'event';
+        div.className = 'blItem';
         div.innerHTML = `
             <div class="date"><strong>${blItem.date}</strong></div>   
             <hr/>

@@ -2,6 +2,19 @@ const foodEl = document.querySelector('#foodlog');
 const loadingEl = document.querySelector('#loading');
 let loading = false; 
 
+function getFoodlogBorder(firstTag) {
+    switch(firstTag) {
+        case "Breakfast":
+            return "#F3AF2F";
+        case "Lunch":
+            return "#F96B00";
+        case "Dinner":
+            return "#B23A3C";
+        default:
+            return "#613C47";
+    } 
+}
+
 const getData = async () => {
     loading = true; 
     const res = await fetch('https://personalmatters.herokuapp.com/api/foodlog')
@@ -36,6 +49,9 @@ const addData = async () => {
             borderBottom = `border-bottom: 2px solid black;`
             div.innerHTML += `<span class="tag" style="${borderLeft} ${borderBottom}">${tag}</span>`
         });
+
+        div.style.borderBottom = `10px solid ${getFoodlogBorder(food.tags[0])}`;
+        console.log(getFoodlogBorder(food.tags[0]))
         foodEl.appendChild(div);
     })
 }

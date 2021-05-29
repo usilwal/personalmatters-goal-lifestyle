@@ -46,6 +46,31 @@ ul {
   list-style: none;
 }
 
+header {
+  text-align: center;
+  box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 100px;
+  max-width: 450px;
+  padding: 10px;
+}
+
+#loading {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#loading img {
+  height: inherit;
+  width: inherit;
+}
+
 #home {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
@@ -92,7 +117,6 @@ ul {
 #projects-timeline {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
-  max-width: 600px;
   margin: 40px auto;
   background-color: #c4c4c4;
   background-image: url("../images/projecttimelinebg.png");
@@ -100,39 +124,31 @@ ul {
   color: rgb(0, 0, 0);
 }
 
-header {
-  text-align: center;
-  box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  border-radius: 5px;
+#events {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  max-width: 2000px;
   margin: auto;
-  margin-top: 100px;
-  max-width: 450px;
-  padding: 10px;
-}
-
-#loading {
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-#loading img {
-  height: inherit;
-  width: inherit;
+  margin-top: 40px;
+  border-radius: 5px;
 }
 
 .event {
-  margin: 20px auto;
-  max-width: 75%;
+  margin: 20px 20px;
+  width: 450px;
   padding: 15px 15px;
   background: #ffffff;
   box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   text-align: center;
+}
+
+.event:hover {
+  background: #e4e4e4;
+  transition: all 1s;
 }
 
 @media (min-width: 980px) {
@@ -307,6 +323,10 @@ header {
     color: rgb(0, 0, 0);
   }
 
+  #bucketlist {
+    margin: auto;
+  }
+
   .blItem {
     margin: 20px auto;
     max-width: 75%;
@@ -315,11 +335,6 @@ header {
     box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     text-align: center;
-  }
-  
-  @media (min-width: 980px) {
-      .food {
-      }
   }
   
   .blItem h3 {
