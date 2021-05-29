@@ -51,10 +51,42 @@ ul {
   line-height: 1.6;
   max-width: 600px;
   margin: auto;
-  background-color: #c4c4c4;
   background-image: url("../images/background.png");
+  background-color: #222222;
   background-repeat: repeat;
   color: rgb(0, 0, 0);
+}
+
+.homeBoxContainer {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  padding-top: 40px;
+  border-radius: 5px;
+}
+
+.homeBox {
+  margin: 15px auto;
+  width: 192px;
+  padding: 15px 15px;
+  background: #ffffff;
+  box-shadow: 10px 10px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.homeBox a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.homeInfo:hover {
+  position: relative;
+  top: 5px;
 }
 
 #projects-timeline {
