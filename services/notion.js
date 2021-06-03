@@ -33,9 +33,12 @@ exports.getProjectsTimeline = async function getProjectsTimeline() {
             description: page.properties.Description.rich_text[0].text.content,
         }
     })
-
+    .filter(event => {
+        let yesterday = new Date();
+        yesterday.setDate(yesterday.getDate() - 1);
+        return (yesterday.toISOString().split('T')[0] < event.date)
+    })
     events = events.sort((a, b) => new Date(b.date) - new Date(a.date)).reverse()
-
     return events 
 }
 
