@@ -7,8 +7,8 @@
 
 nav {
     position: fixed;
-    background-color: rgb(0, 0, 0);
     display: flex;
+    background-color: rgb(0, 0, 0);
     z-index: 999;
     top: 0;
     left: 0;
@@ -41,6 +41,39 @@ nav {
 .nav-link a:hover {
     color: red;
 }
+
+.nav-link .icon {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .nav-link li {display: none;}
+  .nav-link .icon {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+
+  }
+  .nav-link.responsive {
+    position: relative;
+    flex-direction: column;
+
+    text-align: right;
+  }
+
+  .nav-link.responsive li {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
 
 ul {
   list-style: none;

@@ -1,8 +1,9 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <nav id="nav-bar">
         <a href="/"><img id="header-img" src="../images/header.png"></a>
-        <ul class="nav-link">
+        <ul id="nav-link" class="nav-link">
             <li>
-                <a href="/">Home</a>
+                <a href="/" class="active">Home</a>
             </li>
             <li>
                 <a href="/projectstimeline">Projects</a>
@@ -15,6 +16,11 @@
             </li>
             <li>
                 <a href="/bucketlist">Bucket List</a> 
+            </li>
+            <li class="icon">
+                <a href="javascript:void(0);" onclick="responsiveIcon()">
+                    <i class="fa fa-bars"></i>
+                </a>              
             </li>
         </ul>
 </nav>
